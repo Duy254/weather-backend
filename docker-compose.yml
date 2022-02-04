@@ -1,0 +1,17 @@
+services:
+  server:
+    image: "swiftlang/swift:nightly-focal"
+    volumes:
+      - /Users/duynguyen/Documents/osu/cs561_Software_method/assignment:/assignment
+    environment:
+      - USER=Duy
+    ports:
+      - "3000:3000"
+    command: bash -c "apt-get update && apt-get install nodejs && node /assignment/app.js"
+
+  client:
+    image: "swiftlang/swift:nightly-focal"
+    volumes:
+      - /Users/duynguyen/Documents/osu/cs561_Software_method/assignment:/assignment
+    environment:
+      - USER=Duy
